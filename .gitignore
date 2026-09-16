@@ -1,0 +1,24 @@
+# 编译生成的可执行文件和目录
+bin/
+*.o
+*.out
+*.exe
+*.app
+
+# 操作系统生成文件
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Clangd 缓存
+.cache/
+.clangd/
+compile_commands.json
+
+# 测试数据文件 (可选忽略)
+# *.in
+# *.out
+# *.ans
