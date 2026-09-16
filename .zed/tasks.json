@@ -1,13 +1,13 @@
 [
   {
     "label": "Compile and Run C++ (GCC)",
-    "command": "if [ -z \"$ZED_FILE\" ]; then echo 'Error: Please open and focus a .cpp file first!'; exit 1; fi; mkdir -p \"$ZED_WORKTREE_ROOT/bin\" && /opt/homebrew/opt/gcc/bin/g++-15 -std=c++20 -O2 -Wall -Wextra \"$ZED_FILE\" -o \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\" && \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\"",
+    "command": "if [ -z \"$ZED_FILE\" ]; then echo 'Error: Please open and focus a .cpp file first!'; exit 1; fi; mkdir -p \"$ZED_WORKTREE_ROOT/bin\" && /opt/homebrew/opt/gcc/bin/g++-15 -std=c++23 -O2 -Wall -Wextra \"$ZED_FILE\" -o \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\" && \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\"",
     "use_new_terminal": false,
     "allow_concurrent_runs": false
   },
   {
     "label": "Compile C++ (GCC)",
-    "command": "if [ -z \"$ZED_FILE\" ]; then echo 'Error: Please open and focus a .cpp file first!'; exit 1; fi; mkdir -p \"$ZED_WORKTREE_ROOT/bin\" && /opt/homebrew/opt/gcc/bin/g++-15 -std=c++20 -O2 -Wall -Wextra \"$ZED_FILE\" -o \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\"",
+    "command": "if [ -z \"$ZED_FILE\" ]; then echo 'Error: Please open and focus a .cpp file first!'; exit 1; fi; mkdir -p \"$ZED_WORKTREE_ROOT/bin\" && /opt/homebrew/opt/gcc/bin/g++-15 -std=c++23 -O2 -Wall -Wextra \"$ZED_FILE\" -o \"$ZED_WORKTREE_ROOT/bin/$ZED_STEM\"",
     "use_new_terminal": false,
     "allow_concurrent_runs": false
   }
