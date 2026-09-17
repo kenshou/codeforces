@@ -4,25 +4,27 @@ using namespace std;    // 省略 std:: 前缀
 void solve() {
     // 这里写单组测试数据的逻辑
     long long n;
-    cin>>n;
-    long long m=n%2;
-    //奇数肯定存在
-    if(m==1){
-        cout<<"YES\n";
-        return;
-    }else {
-        while((m==0)&&(n>2)){
-            n/=2;
-            m=n%2;
+    if (!(cin >> n)) return;
+    long long n10=0,n8=0,n6=0;
+    n6=n/6;
+    n=n%6;
+    if(n6>0){
+
+        if((n>0)&&(n<=2)){
+                n6--;
+                n8++;
+        }else if((n>0)&&(n>2)&&(n<=4)){
+            n6--;
+            n10++;
+        }else if((n>0)&&(n>4)){
+            n6++;
         }
-        if(m==1){
-            cout<<"YES\n";
-            return;
-        }else{
-            cout<<"NO\n";
-            return;
-        }
+    }else{
+        n6++;
     }
+    // 业务逻辑...
+    // println("n10:{} n8:{} n6: {}\n",n10,n8,n6);
+    cout <<(n10*25+n8*20+n6*15)<< "\n";
 }
 
 int main() {
@@ -30,7 +32,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t ;
+    int t;
     // 如果题目有多组测试用例（如 CF 常见的 t 组输入），取消下行注释：
     cin >> t;
     while (t--) {
