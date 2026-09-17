@@ -5,12 +5,16 @@ void solve() {
     // 这里写单组测试数据的逻辑
     int n;
     if (!(cin >> n)) return;
-    vector<int> a(n);
+    long long sum=0;
+    int x;
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
+        cin >> x;
+        sum+=x;
     }
+    long long last=sum%n;
+
     // 业务逻辑...
-    cout << "ans\n";
+    cout << last*(n-last)<<'\n';
 }
 
 int main() {
